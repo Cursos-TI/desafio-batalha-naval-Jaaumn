@@ -10,7 +10,7 @@ int main() {
     int linhaH = 7;
     int colunaH = 1;
 
-    // Inserindo o navio horizontal
+    // Inserindo o navio 1 horizontal
     for (int i = 0; i < tamanho_navio; i++) 
     {
         tabuleiro[linhaH][colunaH + i] = 3;
@@ -20,34 +20,33 @@ int main() {
     int linhaV = 3;
     int colunaV = 8;
 
-    // Inserindo o navio vertical
+    // Inserindo o navio 2 vertical
     for (int i = 0; i < tamanho_navio; i++)
     {
         tabuleiro[linhaV - i][colunaV] = 3;
     }
     
-    // Inserindo navio diagonal principal
+    // Inserindo navio 3 na diagonal principal
     for (int i = 1; i < 4; i++)
     {
         tabuleiro [i][i] = 3;
     }
 
-    // inicializando posições iniciais do navio 4
-    int linhainicialnavio4 = 7;
-    int colunainicialnavio4 = 8;
-
-    for (int i = 7; i < 10; i++)
+    // Inserindo navio 4
+        for (int i = 0; i < 3; i++)
     {
-        for (int j = 8; j < 9; j++)
+        for (int j = 6; j > 3; j--)
         {
-            tabuleiro [linhainicialnavio4][colunainicialnavio4] = 3;
-            linhainicialnavio4++;
-            colunainicialnavio4--;
+            if ((i == 0 && j == 6)||(i == 1 && j == 5)||(i == 2 && j == 4)) //if para determinar posição das colunas
+            {
+                tabuleiro[i][j] = 3;
+            }
+            
         }
         
     }
     
-    
+      
 
 
     // Cabeçalho: letras das colunas
