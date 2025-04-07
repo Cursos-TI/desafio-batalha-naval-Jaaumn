@@ -26,6 +26,28 @@ int main() {
         tabuleiro[linhaV - i][colunaV] = 3;
     }
     
+    // Inserindo navio diagonal principal
+    for (int i = 1; i < 4; i++)
+    {
+        tabuleiro [i][i] = 3;
+    }
+
+    // inicializando posições iniciais do navio 4
+    int linhainicialnavio4 = 7;
+    int colunainicialnavio4 = 8;
+
+    for (int i = 7; i < 10; i++)
+    {
+        for (int j = 8; j < 9; j++)
+        {
+            tabuleiro [linhainicialnavio4][colunainicialnavio4] = 3;
+            linhainicialnavio4++;
+            colunainicialnavio4--;
+        }
+        
+    }
+    
+    
 
 
     // Cabeçalho: letras das colunas
